@@ -7,12 +7,12 @@
 
 " Automatic installation
 if empty(glob('~/.vim/autoload/plug.vim'))
-    silent! curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
     
-silent! call plug#begin('~/.vim/plugged')
+silent! call plug#begin()
  
 Plug 'vim-scripts/indentpython.vim'
 Plug 'scrooloose/nerdtree'
@@ -58,9 +58,7 @@ set scrolloff=3
 set encoding=utf-8
 
 " Read vim settings from the file itself
-set modeline modlines=2
-
-set wildignore=*.o, *~, *.pyc, *.pyo, *\$py.class
+set modeline modelines=2
 
 set noerrorbells
 set visualbell t_vb=

@@ -92,6 +92,18 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias m='less'
+alias u='cd ..'
+alias uu='cd ../..'
+alias uuu='cd ../../..'
+alias uuuu='cd ../../../..'
+alias uuuuu='cd ../../../../..'
+
+alias sep='printf "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n========================================================================================================================\n"'
+
+alias cd..='cd ..'
+alias weather='curl v2.wttr.in'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -101,9 +113,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+#if [ -f ~/.bash_aliases ]; then
+#    . ~/.bash_aliases
+#fi
 
 alias school='cd ~/Dropbox/notebooks/School && ll'
 
@@ -120,3 +132,4 @@ fi
 
 # added by Anaconda3 installer
 export PATH="/home/eddie/anaconda3/bin:$PATH"
+export PYTHONSTARTUP=~/.startup.py

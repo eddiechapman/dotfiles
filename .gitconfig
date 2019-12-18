@@ -1,3 +1,45 @@
 [user]
 	email = eddie.chapman4@gmail.com
-	name = eddiechapman
+    name = Eddie Chapman
+
+[github]
+    user = eddiechapman
+
+[alias]
+    # In an alias, an initial ":" command indicates what git command completion
+    # to use for the alias.
+    br = branch
+    co = checkout
+    sw = switch
+    ci = commit
+    d = diff
+    di = diff
+    s = status -s -b --show-stash
+    lhist = log --pretty=me --graph --date=short
+
+[color]
+    ui = true
+
+[color.diff]
+  plain = white
+  old = red
+  new = green
+  meta = white blue
+  whitespace = red reverse
+  frag = cyan reverse
+  func = white dim reverse
+
+[color "diff-highlight"]
+  oldNormal = red
+  oldHighlight = red bold
+  newNormal = green
+  newHighlight = green bold
+
+[diff-so-fancy]
+  rulerWidth = 80
+  stripLeadingSymbols = false
+  markEmptyLines = false
+
+[pretty]
+  me = %h %C(green dim)%ad%C(reset)%C(auto)%d%C(reset) %s %C(cyan)%an%C(reset)
+  relnote = %h %C(green dim)%ad%C(reset) %C(cyan)%an%C(reset): %s
