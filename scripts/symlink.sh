@@ -31,7 +31,7 @@ function linkDotfile {
 
 linkDotfile .vimrc
 linkDotfile .bashrc
-linkDotfile .git_profile
+linkDotfile .gitconfig
 linkDotfile .startup.py
 
 mkdir .vim
