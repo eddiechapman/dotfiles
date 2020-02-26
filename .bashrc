@@ -129,4 +129,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PYTHONSTARTUP=~/.startup.py
+export PYTHONSTARTUP=$HOME/.startup.py
+export PATH=$HOME/dotfiles/scripts
+export PATH=$HOME/repos
+
