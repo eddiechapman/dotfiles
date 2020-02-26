@@ -129,7 +129,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 export PYTHONSTARTUP=$HOME/.startup.py
-export PATH=$HOME/dotfiles/scripts
-export PATH=$HOME/repos
+export PATH=$PATH:$HOME/dotfiles/scripts
+export PATH=$PATH:$HOME/repos
 
