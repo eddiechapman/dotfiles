@@ -19,7 +19,6 @@ install vim
 install curl
 install htop
 install openvpn
-install i3
 
 # Dev libraries
 install apt-transport-https
@@ -38,3 +37,5 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
 install r-base
 install r-base-dev
+
+# TODO: LaTeX, fonts, Zotero
