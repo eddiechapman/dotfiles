@@ -133,7 +133,7 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 export PYTHONSTARTUP=$HOME/.startup.py
 export PATH=$PATH:$HOME/dotfiles/scripts
 export PATH=$PATH:$HOME/repos
-
+export PATH=$PATH:/opt/zotero
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
