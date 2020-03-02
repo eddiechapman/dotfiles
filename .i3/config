@@ -29,7 +29,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Polybar
-exec_always --no-startup-id $HOME/,config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Multiple monitors
+exec_always $HOME/.i3/monitors.sh
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
