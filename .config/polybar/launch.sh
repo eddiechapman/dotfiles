@@ -3,8 +3,14 @@
 # Terminate already running bar instances
 killall -q polybar
 
-# Launch example bar
-echo "---" | tee -a /tmp/polybar1.log
-polybar example >> /tmp/polybar1.log 2>&1 &
+# Wait until processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-echo "Bar launched.."
+# Launch polybar on multiple screens
+if type "xrandr"; then
+    for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        MONITOR=$m polybar --reload example &
+    done
+else
+    polybar --reload example &
+fi
