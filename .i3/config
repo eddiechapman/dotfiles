@@ -202,10 +202,10 @@ bar {
 # i3-gaps
 
 # Disable window titlebars
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 
-gaps inner 20
-gaps outer 10
+gaps inner 15 
+gaps outer 20
 
 
 # Polybar
