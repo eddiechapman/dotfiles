@@ -38,6 +38,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'tpope/vim-fugitive'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
