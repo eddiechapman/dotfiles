@@ -37,6 +37,7 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
