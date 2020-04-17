@@ -64,8 +64,9 @@ inoremap jk <ESC>
 " <leader> is our personal modifier key
 let mapleader = " "                     
 
-" # of lines shown above/below cursor
+" # of lines shown above/below and left/right of cursor
 set scrolloff=3                         
+set sidescrolloff=5
 
 set encoding=utf-8
 
