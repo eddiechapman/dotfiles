@@ -158,6 +158,11 @@ let g:deoplete#enable_at_startup = 1
 " Use tab to navigate auto-completion list
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+" Specify Python interpreter containing neovim package
+let g:python3_host_prog = '/home/eddie/.config/nvim/venv/bin/python'
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " seoul256
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
