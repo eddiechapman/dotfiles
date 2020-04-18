@@ -1,3 +1,7 @@
 .vim/bundle
 .vim/plugged
 .vim/autoload/plug.vim
+.config/nvim/.venv
+.config/nvim/autoload/plug.vim
+.config/nvim/bundle
+.config/nvim/plugged
