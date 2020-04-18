@@ -19,7 +19,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-fugitive'
@@ -184,3 +184,4 @@ let g:NERDTreeQuitOnOpen = 2
 " Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme='base16'
+
