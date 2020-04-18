@@ -7,13 +7,13 @@
 
 " Automatic installation
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.VimEnter --create-dirs
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall 
+  autocmd VimEnter * PlugInstall --sync
 endif
 
 
-silent! call plug#begin()
+silent! call plug#begin('~/.config/nvim/plugged')
  
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
