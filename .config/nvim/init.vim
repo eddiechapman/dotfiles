@@ -12,19 +12,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall 
 endif
 
-function! BuildYCM(info)  
-  " info is a dictionary with 3 fields  
-  " - name:   name of the plugin  
-  " - status: 'installed', 'updated', or 'unchanged'  
-  " - force:  set on PlugInstall! or PlugUpdate!  
-  if a:info.status == 'installed' || a:info.force  
-    !./install.py  
-  endif  
-endfunction  
 
 silent! call plug#begin()
  
-Plug 'vim-scripts/indentpython.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -32,13 +22,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/seoul256.vim'
-Plug 'vim-pandoc/vim-rmarkdown'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-Plug 'vim-syntastic/syntastic'
-Plug 'nvie/vim-flake8'
 Plug 'tpope/vim-fugitive'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -160,19 +146,20 @@ fun! CleanExtraSpaces()
 endfun
 
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-pandoc  
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pandoc#modules#disabled = ["folding", "spell"]
-let g:pandoc#syntax#conceal#use = 0
-let g:pandoc#biblio#sources = "gbcy"
-let g:pandoc#biblio#bibs = ["/home/eddie/bibs/library.bib"]
-let g:pandoc#filetypes#handled = ["pandoc", "markdown", "textile"]
-let g:pandoc#filetypes#pandoc_markdown = 0
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" deoplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:deoplete#enable_at_startup = 1
+
+" Use tab to navigate auto-completion list
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " seoul256
@@ -195,36 +182,8 @@ let g:NERDTreeCascadeOpenSingleChildDir = 1
 " Close bookmarks after using a bookmark
 let g:NERDTreeQuitOnOpen = 2        
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme='base16'
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:synstastic_python_checkers = ['flake8']
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" YouCompleteMe
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"if !exists('g:ycm_semantic_triggers')
-"    let g:ycm_semantic_triggers = {}
-"endif
-"let g:ycm_semantic_triggers.pandoc = ['@']
-"
-let g:ycm_filetype_blacklist = {}
-let g:ycm_semantic_triggers = {'pandoc': ['@'], 'markdown': ['@']}
