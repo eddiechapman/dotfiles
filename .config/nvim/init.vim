@@ -38,13 +38,9 @@ set history=500
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
-set omnifunc=syntaxcomplete
 
 " Set to autoread when a file is changed from the outside
 set autoread
-
-" TODO: What does this do??
-set nocompatible
 
 " Remap the key for toggling command mode
 inoremap jk <ESC>
@@ -63,6 +59,7 @@ set modeline modelines=2
 
 set noerrorbells
 set visualbell t_vb=
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Display/window settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
