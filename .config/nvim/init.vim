@@ -25,6 +25,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
@@ -190,3 +191,11 @@ let g:NERDTreeQuitOnOpen = 2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme='base16'
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" jedi-vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:jedi#completions_enabled = 0
+let g:jedi#use_splits_not_buffers = "right"
