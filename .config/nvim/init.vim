@@ -165,7 +165,10 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 let g:python3_host_prog = '/home/eddie/.config/nvim/venv/bin/python'
 
 " Configure autocompletions for vim-pandoc citations
-call deoplete#custom#var('omni', 'input_patterns', {'pandoc': '@'})
+call deoplete#custom#var('omni', 'input_patterns', {
+    \'pandoc': '@', 
+    \'markdown': '@'
+    \})
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " seoul256
@@ -212,6 +215,6 @@ let g:pandoc#modules#disabled = ["folding", "spell"]
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#biblio#sources = "gbcy"
 let g:pandoc#biblio#bibs = ["/home/eddie/bibs/library.bib"]
-let g:pandoc#filetyles#handled = ["pandoc", "markdown", "textile"]
+let g:pandoc#filetypes#handled = ["pandoc", "markdown", "textile"]
 let g:pandoc#filetypes#pandoc_markdown = 0
 
