@@ -28,6 +28,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
