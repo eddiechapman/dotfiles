@@ -29,6 +29,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 
