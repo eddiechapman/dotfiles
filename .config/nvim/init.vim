@@ -26,6 +26,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
@@ -199,3 +201,16 @@ let g:airline_theme='base16'
 
 let g:jedi#completions_enabled = 0
 let g:jedi#use_splits_not_buffers = "right"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-pandoc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:pandoc#modules#disabled = ["folding", "spell"]
+let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#biblio#sources = "gbcy"
+let g:pandoc#biblio#bibs = ["/home/eddie/bibs/library.bib"]
+let g:pandoc#filetyles#handled = ["pandoc", "markdown", "textile"]
+let g:pandoc#filetypes#pandoc_markdown = 0
+
