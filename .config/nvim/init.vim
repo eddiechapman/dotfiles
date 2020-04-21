@@ -216,5 +216,5 @@ let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#biblio#sources = "gbcy"
 let g:pandoc#biblio#bibs = ["/home/eddie/bibs/library.bib"]
 let g:pandoc#filetypes#handled = ["pandoc", "markdown", "textile"]
-let g:pandoc#filetypes#pandoc_markdown = 0
+let g:pandoc#filetypes#pandoc_markdown = 0 
 
