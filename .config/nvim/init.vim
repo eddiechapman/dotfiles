@@ -164,7 +164,8 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " Specify Python interpreter containing neovim package
 let g:python3_host_prog = '/home/eddie/.config/nvim/venv/bin/python'
 
-
+" Configure autocompletions for vim-pandoc citations
+call deoplete#custom#var('omni', 'input_patterns', {'pandoc': '@'})
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " seoul256
