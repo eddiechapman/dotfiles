@@ -80,6 +80,8 @@ endif
 
 set title
 
+set spell
+
 " highlight full line that cursor is on
 set cursorline                         
 
