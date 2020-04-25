@@ -31,6 +31,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jiangmiao/auto-pairs'
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 
@@ -220,4 +221,14 @@ let g:pandoc#biblio#sources = "gbcy"
 let g:pandoc#biblio#bibs = ["/home/eddie/bibs/library.bib"]
 let g:pandoc#filetypes#handled = ["pandoc", "markdown", "textile"]
 let g:pandoc#filetypes#pandoc_markdown = 0 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ultisnips
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:UltiSnipsEditSplit="vertical"
 
