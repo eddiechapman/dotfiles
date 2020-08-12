@@ -32,3 +32,5 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 
 alias school='cd ~/Dropbox/notebooks && ll'
+
+alias activate='source venv/bin/activate'
