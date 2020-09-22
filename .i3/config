@@ -28,6 +28,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Wallpaper image
+exec --no-startup-id feh --no-fehbg --bg-scale '/home/eddie/dotfiles/.i3/background.jpg'
+
 # Multiple monitors
 exec_always $HOME/.i3/monitors.sh
 
